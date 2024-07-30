@@ -15,7 +15,7 @@ body {
 }
 
 .calculator-container {
-    height: 500px;
+    height: 550px; // /* Added 50px to the height via GitHub editor*/
     width: 50%;
     border: 3px solid black;
     margin: 250px auto;
