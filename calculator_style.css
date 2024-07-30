@@ -1,0 +1,107 @@
+/* Google Fonts Link */
+@import url('https://fonts.googleapis.com/css2?family=Libre+Baskerville:ital,wght@0,400;0,700;1,400&family=Orbitron:wght@400..900&family=Oxanium:wght@200..800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: "Orbitron", sans-serif;
+}
+
+body {
+    background: lightgray;
+    width: 50%;
+    margin: auto;
+}
+
+.calculator-container {
+    height: 500px;
+    width: 50%;
+    border: 3px solid black;
+    margin: 250px auto;
+    display: grid;
+    grid-template-rows: auto auto auto auto;
+    gap: 10px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    overflow: auto;
+}
+
+.result-div {
+    grid-row: 1 / 2;
+    background: #f0f0f0;
+    display: flex;
+    align-items: center;
+    justify-content: right;
+    padding: 0 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 2rem;
+    overflow: hidden;
+}
+
+.result-div p {
+    margin: 0;
+}
+
+.arithmetic-operators, .numbers, .other-operators {
+    display: grid;
+    gap: 10px;
+}
+
+.arithmetic-operators {
+    grid-row: 2 / 3;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.numbers {
+    grid-row: 3 / 4;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+}
+
+.other-operators {
+    grid-row: 4 / 5;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+button {
+    background-color: #444;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+button:hover {
+    background: #555;
+}
+
+button:active {
+    background: #333;
+    transform: scale(0.95);
+}
+
+button:focus {
+    outline: none;
+}
+
+.arithmetic-operators button {
+    background: darkslategray;
+}
+.arithmetic-operators button:hover {
+    cursor: pointer;
+    background: rgb(115, 193, 193);
+}
+
+.other-operators button#equals:hover {
+    background: orange;
+}
+.other-operators button#cancel:hover {
+    background: orangered;
+}
